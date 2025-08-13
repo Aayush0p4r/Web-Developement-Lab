@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tables – Examples</title>
+    <style>
+      body {
+        font-family: system-ui, Arial, sans-serif;
+        margin: 2rem;
+        line-height: 1.6;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 760px;
+      }
+      caption {
+        caption-side: top;
+        text-align: left;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      thead th {
+        background: #f3f4f6;
+      }
+      th,
+      td {
+        border: 1px solid #e5e7eb;
+        padding: 0.6rem 0.8rem;
+        text-align: left;
+      }
+      tbody tr:nth-child(even) {
+        background: #fafafa;
+      }
+      tfoot td {
+        font-weight: 700;
+        background: #f9fafb;
+      }
+      .note {
+        background: #f6f8fa;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Tables</h1>
+    <div class="note">
+      This page shows a basic table with <code>&lt;caption&gt;</code>,
+      <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and
+      <code>&lt;tfoot&gt;</code>, plus examples of <code>colspan</code> and
+      <code>rowspan</code>.
+    </div>
+    <table>
+      <caption>
+        Quarterly Sales (₹)
+      </caption>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Q1</th>
+          <th>Q2</th>
+          <th>Q3</th>
+          <th>Q4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Notebook</td>
+          <td>25,000</td>
+          <td>28,500</td>
+          <td>27,300</td>
+          <td>30,100</td>
+        </tr>
+        <tr>
+          <td>Pen Set</td>
+          <td>9,800</td>
+          <td>10,600</td>
+          <td>10,150</td>
+          <td>11,200</td>
+        </tr>
+        <tr>
+          <td>Backpack</td>
+          <td>14,400</td>
+          <td>15,900</td>
+          <td>15,300</td>
+          <td>16,750</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td>49,200</td>
+          <td>55,000</td>
+          <td>52,750</td>
+          <td>58,050</td>
+        </tr>
+      </tfoot>
+    </table>
+    <h2 style="margin-top: 2rem">Colspan & Rowspan</h2>
+    <table>
+      <caption>
+        Timetable (Sample)
+      </caption>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>09–10</th>
+          <th>10–11</th>
+          <th>11–12</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">Mon</td>
+          <td>Maths</td>
+          <td colspan="2">Physics Lab</td>
+        </tr>
+        <tr>
+          <td>English</td>
+          <td>History</td>
+          <td>Sports</td>
+        </tr>
+        <tr>
+          <td>Tue</td>
+          <td colspan="3">Workshop</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

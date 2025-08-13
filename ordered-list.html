@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ordered Lists – Examples</title>
+    <style>
+      body {
+        font-family: system-ui, Arial, sans-serif;
+        margin: 2rem;
+        line-height: 1.6;
+      }
+      h1 {
+        margin-bottom: 0.25rem;
+      }
+      section {
+        margin-block: 1.5rem;
+      }
+      code {
+        background: #f6f6f6;
+        padding: 0.1rem 0.3rem;
+        border-radius: 0.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ordered Lists</h1>
+    <p>
+      Demonstrating default numbering, alphabetic, Roman numerals,
+      <code>start</code>, and <code>reversed</code>.
+    </p>
+
+    <section>
+      <h2>Default (1, 2, 3…)</h2>
+      <ol>
+        <li>Plan</li>
+        <li>Build</li>
+        <li>Test</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Lower Alpha (a, b, c…)</h2>
+      <ol type="a">
+        <li>Requirement</li>
+        <li>Design</li>
+        <li>Implementation</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Upper Roman (I, II, III…)</h2>
+      <ol type="I">
+        <li>Introduction</li>
+        <li>Method</li>
+        <li>Results</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Start at 5</h2>
+      <ol start="5">
+        <li>Fifth</li>
+        <li>Sixth</li>
+        <li>Seventh</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Reversed</h2>
+      <ol reversed>
+        <li>Step 3</li>
+        <li>Step 2</li>
+        <li>Step 1</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Nested</h2>
+      <ol>
+        <li>
+          Frontend
+          <ol type="a">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ol>
+        </li>
+        <li>Backend</li>
+      </ol>
+    </section>
+  </body>
+</html>

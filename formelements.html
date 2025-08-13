@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Elements Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+      }
+      label {
+        display: block;
+        margin-top: 0.5rem;
+      }
+      input,
+      select,
+      textarea,
+      button {
+        margin-top: 0.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Form Elements</h1>
+    <form action="#" method="post">
+      <!-- Text input -->
+      <label>
+        Name:
+        <input
+          type="text"
+          name="username"
+          placeholder="Enter your name"
+          required
+        />
+      </label>
+      <!-- Password -->
+      <label>
+        Password:
+        <input type="password" name="password" required />
+      </label>
+      <!-- Email -->
+      <label>
+        Email:
+        <input type="email" name="email" />
+      </label>
+      <!-- Radio buttons -->
+      <fieldset>
+        <legend>Gender:</legend>
+        <label><input type="radio" name="gender" value="male" /> Male</label>
+        <label
+          ><input type="radio" name="gender" value="female" /> Female</label
+        >
+      </fieldset>
+      <!-- Checkboxes -->
+      <fieldset>
+        <legend>Hobbies:</legend>
+        <label
+          ><input type="checkbox" name="hobby" value="reading" /> Reading</label
+        >
+        <label
+          ><input type="checkbox" name="hobby" value="sports" /> Sports</label
+        >
+        <label
+          ><input type="checkbox" name="hobby" value="music" /> Music</label
+        >
+      </fieldset>
+      <!-- Select dropdown -->
+      <label>
+        Country:
+        <select name="country">
+          <option value="">--Select--</option>
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+        </select>
+      </label>
+      <!-- Multi-line text -->
+      <label>
+        Message:
+        <textarea name="message" rows="4" cols="30"></textarea>
+      </label>
+      <!-- File upload -->
+      <label>
+        Upload File:
+        <input type="file" name="upload" />
+      </label>
+      <!-- Buttons -->
+      <div style="margin-top: 1rem">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>

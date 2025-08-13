@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Unordered Lists – Examples</title>
+    <style>
+      body {
+        font-family: system-ui, Arial, sans-serif;
+        margin: 2rem;
+        line-height: 1.6;
+      }
+      ul.demo {
+        margin-bottom: 1rem;
+      }
+      .disc {
+        list-style-type: disc;
+      }
+      .circle {
+        list-style-type: circle;
+      }
+      .square {
+        list-style-type: square;
+      }
+      .none {
+        list-style-type: none;
+        padding-left: 1rem;
+      }
+      .none li::before {
+        content: "– ";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Unordered Lists</h1>
+    <h2>Disc (default)</h2>
+    <ul class="demo disc">
+      <li>Apples</li>
+      <li>Bananas</li>
+      <li>Cherries</li>
+    </ul>
+    <h2>Circle</h2>
+    <ul class="demo circle">
+      <li>Cat</li>
+      <li>Dog</li>
+      <li>Rabbit</li>
+    </ul>
+    <h2>Square</h2>
+    <ul class="demo square">
+      <li>Red</li>
+      <li>Green</li>
+      <li>Blue</li>
+    </ul>
+    <h2>Custom dash bullets (no default bullets)</h2>
+    <ul class="demo none">
+      <li>Read requirements</li>
+      <li>Draft solution</li>
+      <li>Review and iterate</li>
+    </ul>
+    <h2>Nested</h2>
+    <ul class="demo disc">
+      <li>
+        Hardware
+        <ul class="square">
+          <li>CPU</li>
+          <li>RAM</li>
+          <li>Storage</li>
+        </ul>
+      </li>
+      <li>Software</li>
+    </ul>
+  </body>
+</html>

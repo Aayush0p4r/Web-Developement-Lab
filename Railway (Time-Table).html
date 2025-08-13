@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railways (Time-Table)</title>
+    <style>
+      body {
+        font-family: system-ui, Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem;
+        line-height: 1.6;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 790px;
+      }
+      caption {
+        caption-side: top;
+        text-align: center;
+        font-weight: 900;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(to right, #a2c1d7, #c6abe2);
+      }
+      thead th {
+        background: #f3f4f6;
+      }
+      th,
+      td {
+        border: 1px solid #e5e7eb;
+        padding: 0.6rem 0.8rem;
+        text-align: center;
+      }
+      tbody tr:nth-child(even) {
+        background: #fafafa;
+      }
+      tfoot td {
+        font-weight: 700;
+        background: #f9fafb;
+      }
+      .note {
+        background: #f6f8fa;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+      }
+    </style>
+</head>
+<body>
+    <table>
+      <caption>
+       <p>Train Schedule for Major Routes</p>
+      </caption>
+        <thead>
+            <tr>
+            <th>Train No.</th>
+            <th>Train Name</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+            <th>Platform</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12345</td>
+                <td>Express 1</td>
+                <td>City A</td>
+                <td>City B</td>
+                <td>08:00 AM</td>
+                <td>10:30 AM</td>
+                <td>Platform 1</td>
+            </tr>
+            <tr>
+                <td>67890</td>
+                <td>Express 2</td>
+                <td>City C</td>
+                <td>City D</td>
+                <td>09:15 AM</td>
+                <td>11:45 AM</td>
+                <td>Platform 2</td>
+            </tr>
+            <tr>
+                <td>11223</td>
+                <td>Express 3</td>
+                <td>City E</td>
+                <td>City F</td>
+                <td>10:00 AM</td>
+                <td>12:30 PM</td>
+                <td>Platform 3</td>
+            </tr>
+            <tr>
+                <td>44556</td>
+                <td>Express 4</td>
+                <td>City G</td>
+                <td>City H</td>
+                <td>11:30 AM</td>
+                <td>02:00 PM</td>
+                <td>Platform 4</td>
+            </tr>
+            <tr>
+                <td>77889</td>
+                <td>Express 5</td>
+                <td>City I</td>
+                <td>City J</td>
+                <td>12:45 PM</td>
+                <td>03:15 PM</td>
+                <td>Platform 5</td>
+            </tr>
+            <tr>
+                <td>33445</td>
+                <td>Express 6</td>
+                <td>City K</td>
+                <td>City L</td>
+                <td>01:00 PM</td>
+                <td>03:30 PM</td>
+                <td>Platform 6</td>
+            </tr>
+            <tr>
+                <td>55667</td>
+                <td>Express 7</td>
+                <td>City M</td>
+                <td>City N</td>
+                <td>02:15 PM</td>
+                <td>04:45 PM</td>
+                <td>Platform 7</td>
+            </tr>
+            <tr>
+                <td>88990</td>
+                <td>Express 8</td>
+                <td>City O</td>
+                <td>City P</td>
+                <td>03:30 PM</td>
+                <td>06:00 PM</td>
+                <td>Platform 8</td>
+            </tr>
+            <tr>
+                <td>10112</td>
+                <td>Express 9</td>
+                <td>City Q</td>
+                <td>City R</td>
+                <td>04:45 PM</td>
+                <td>07:15 PM</td>
+                <td>Platform 9</td>
+            </tr>
+            <tr>
+                <td>13141</td>
+                <td>Express 10</td>
+                <td>City S</td>
+                <td>City T</td>
+                <td>06:00 PM</td>
+                <td>08:30 PM</td>
+                <td>Platform 10</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
