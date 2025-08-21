@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Two Tables with Alignment & Colors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --radius: 10px;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 24px;
+        background: #f7f9fc;
+      }
+      h1 {
+        margin: 0 0 16px;
+      }
+      section {
+        margin-bottom: 28px;
+      }
+      /* Generic table styling */
+      table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #d1d9e6;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      }
+      td,
+      th {
+        padding: 14px 16px;
+        border-right: 1px solid rgba(0, 0, 0, 0.06);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        min-width: 90px;
+        white-space: nowrap;
+      }
+      tr:last-child td {
+        border-bottom: 0;
+      }
+      td:last-child,
+      th:last-child {
+        border-right: 0;
+      }
+      /* Table 1: 1 row × 5 columns, center-aligned, each column a different color */
+      .table-1 td {
+        text-align: center;
+        color: #0b1020;
+        font-weight: 700;
+      }
+      .table-1 td:nth-child(1) {
+        background: #fde68a;
+      } /* amber */
+      .table-1 td:nth-child(2) {
+        background: #a7f3d0;
+      } /* mint */
+      .table-1 td:nth-child(3) {
+        background: #bfdbfe;
+      } /* light blue */
+      .table-1 td:nth-child(4) {
+        background: #fecaca;
+      } /* light red */
+      .table-1 td:nth-child(5) {
+        background: #ddd6fe;
+      } /* light purple */
+      /* Table 2: 3 rows × 4 columns, right-aligned, each row a different color */
+      .table-2 td {
+        text-align: right;
+        font-weight: 600;
+      }
+      .table-2 tr:nth-child(1) td {
+        background: #e2f0ff;
+        color: #0b2a6d;
+      }
+      .table-2 tr:nth-child(2) td {
+        background: #e7fee7;
+        color: #064e3b;
+      }
+      .table-2 tr:nth-child(3) td {
+        background: #fff1e6;
+        color: #7a2e0e;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Two Tables: Alignment & Colors</h1>
+    <!-- First table: 1 row, 5 columns -->
+    <section>
+      <h2 style="margin: 8px 0">
+        Table 1 – 1 Row × 5 Columns (Center Aligned, Per-Column Colors)
+      </h2>
+      <table class="table-1" aria-label="One row five columns">
+        <tr>
+          <td>Col 1</td>
+          <td>Col 2</td>
+          <td>Col 3</td>
+          <td>Col 4</td>
+          <td>Col 5</td>
+        </tr>
+      </table>
+    </section>
+    <!-- Second table: 3 rows, 4 columns -->
+    <section>
+      <h2 style="margin: 8px 0">
+        Table 2 – 3 Rows × 4 Columns (Right Aligned, Per-Row Colors)
+      </h2>
+      <table class="table-2" aria-label="Three rows four columns">
+        <tr>
+          <td>R1C1</td>
+          <td>R1C2</td>
+          <td>R1C3</td>
+          <td>R1C4</td>
+        </tr>
+        <tr>
+          <td>R2C1</td>
+          <td>R2C2</td>
+          <td>R2C3</td>
+          <td>R2C4</td>
+        </tr>
+        <tr>
+          <td>R3C1</td>
+          <td>R3C2</td>
+          <td>R3C3</td>
+          <td>R3C4</td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>

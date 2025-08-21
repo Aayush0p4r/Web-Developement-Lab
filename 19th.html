@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ten Divisions + String Concatenation Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --pad: 16px;
+        --gap: 12px;
+        --radius: 12px;
+        --shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        background: #f7fafc;
+        color: #0f172a;
+      }
+      /* Top-right image hyperlink */
+      .top-right-link {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        border: 2px solid #fff;
+      }
+      .top-right-link img {
+        display: block;
+        width: 120px; /* specific size */
+        height: 80px; /* specific size */
+        object-fit: cover;
+      }
+      header {
+        padding: calc(var(--pad) * 4) var(--pad) var(--pad);
+        text-align: center;
+        background: linear-gradient(180deg, #ffffff, #f1f5f9);
+        position: relative;
+      }
+      header h1 {
+        margin: 0 0 6px;
+      }
+      header p {
+        margin: 0;
+        color: #475569;
+      }
+      main {
+        padding: var(--pad);
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      /* Section cards */
+      .card {
+        background: #ffffff;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: calc(var(--pad) * 1.2);
+        margin-bottom: 18px;
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        color: #0f172a;
+      }
+      /* Grid of 10 divisions */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: var(--gap);
+        margin-top: 8px;
+      }
+      .box {
+        padding: 18px;
+        border-radius: var(--radius);
+        font-weight: 700;
+        text-align: center;
+        min-height: 88px;
+        display: grid;
+        place-items: center;
+      }
+      /* 10 unique colour combos */
+      .box1 {
+        background: #1e293b;
+        color: #fef08a;
+      }
+      .box2 {
+        background: #f59e0b;
+        color: #0b1020;
+      }
+      .box3 {
+        background: #10b981;
+        color: #072012;
+      }
+      .box4 {
+        background: #3b82f6;
+        color: #f8fafc;
+      }
+      .box5 {
+        background: #ef4444;
+        color: #fff7ed;
+      }
+      .box6 {
+        background: #9333ea;
+        color: #faf5ff;
+      }
+      .box7 {
+        background: #0ea5e9;
+        color: #06202a;
+      }
+      .box8 {
+        background: #a3e635;
+        color: #0b2410;
+      }
+      .box9 {
+        background: #f472b6;
+        color: #271322;
+      }
+      .box10 {
+        background: #22c55e;
+        color: #041d10;
+      }
+      /* Form styles */
+      form label {
+        display: block;
+        margin: 10px 0 6px;
+        font-weight: 600;
+      }
+      form input[type="text"] {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 15px;
+        outline: none;
+      }
+      form input[type="text"]:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+      }
+      .actions {
+        margin-top: 14px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      button {
+        padding: 10px 16px;
+        border: 0;
+        border-radius: 8px;
+        background: #2563eb;
+        color: #fff;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      button:hover {
+        filter: brightness(1.06);
+      }
+      .result {
+        margin-top: 16px;
+        padding: 12px;
+        border-radius: 8px;
+        background: #eff6ff;
+        color: #0b2a6d;
+        font-family: Consolas, ui-monospace, SFMono-Regular, Menlo, monospace;
+        word-break: break-word;
+        display: none;
+      }
+      footer {
+        text-align: center;
+        padding: 22px;
+        color: #64748b;
+      }
+      @media (max-width: 480px) {
+        header {
+          padding-top: 120px;
+        } /* keep space under fixed image on small screens */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fixed image hyperlink (opens in a new tab) -->
+    <a
+      class="top-right-link"
+      href="https://www.india.gov.in/"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/640px-Flag_of_India.svg.png"
+        alt="Visit India Portal"
+      />
+    </a>
+    <header>
+      <h1>Ten Divisions & String Concatenation Form</h1>
+      <p>
+        Demo page combining colourful divisions and a manual string
+        concatenator.
+      </p>
+    </header>
+    <main>
+      <!-- Section 1: Ten Divisions -->
+      <section class="card" id="divisions">
+        <h2>Ten Unique Divisions</h2>
+        <div class="grid">
+          <div class="box box1">Division 1</div>
+          <div class="box box2">Division 2</div>
+          <div class="box box3">Division 3</div>
+          <div class="box box4">Division 4</div>
+          <div class="box box5">Division 5</div>
+          <div class="box box6">Division 6</div>
+          <div class="box box7">Division 7</div>
+          <div class="box box8">Division 8</div>
+          <div class="box box9">Division 9</div>
+          <div class="box box10">Division 10</div>
+        </div>
+      </section>
+      <!-- Section 2: Concatenation Form -->
+      <section class="card" id="form">
+        <h2>Concatenate Three Strings (No Built-in concat/join)</h2>
+        <form id="concatForm" autocomplete="off">
+          <label for="s1">String 1</label>
+          <input type="text" id="s1" name="s1" required />
+          <label for="s2">String 2</label>
+          <input type="text" id="s2" name="s2" required />
+          <label for="s3">String 3</label>
+          <input type="text" id="s3" name="s3" required />
+          <div class="actions">
+            <button type="submit">Concatenate</button>
+            <button type="button" id="clearBtn" style="background: #334155">
+              Clear
+            </button>
+          </div>
+        </form>
+        <div id="out" class="result"></div>
+      </section>
+    </main>
+    <footer>© Demo – Ten Divisions & Manual Concatenation</footer>
+    <script>
+      // Manual concatenation without String.concat() or Array.join().
+      // We build the result character-by-character using loops.
+      function manualConcat(a, b, c) {
+        var r = "";
+        for (var i = 0; i < a.length; i++) r += a[i];
+        for (var j = 0; j < b.length; j++) r += b[j];
+        for (var k = 0; k < c.length; k++) r += c[k];
+        return r;
+      }
+      var form = document.getElementById("concatForm");
+      var out = document.getElementById("out");
+      var clearBtn = document.getElementById("clearBtn");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var s1 = document.getElementById("s1").value;
+        var s2 = document.getElementById("s2").value;
+        var s3 = document.getElementById("s3").value;
+        var combined = manualConcat(s1, s2, s3);
+        out.style.display = "block";
+        out.textContent = "Result: " + combined;
+      });
+      clearBtn.addEventListener("click", function () {
+        document.getElementById("s1").value = "";
+        document.getElementById("s2").value = "";
+        document.getElementById("s3").value = "";
+        out.style.display = "none";
+        out.textContent = "";
+        document.getElementById("s1").focus();
+      });
+    </script>
+  </body>
+</html>
