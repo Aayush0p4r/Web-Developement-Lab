@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eight Frames in One Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 50vh);
+        height: 100vh;
+      }
+      .frame {
+        border: 1px solid #aaa;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .odd {
+        background: #e8f7ee;
+        color: #1b5e20;
+      }
+      .even {
+        background: #e7f0ff;
+        color: #0d47a1;
+      }
+      .label {
+        font-size: 14px;
+        margin-top: 5px;
+        font-weight: normal;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <!-- Row 1 -->
+      <div class="frame odd">
+        Odd Frame
+        <div class="label">Frame 1</div>
+      </div>
+      <div class="frame even">
+        Even Frame
+        <div class="label">Frame 2</div>
+      </div>
+      <div class="frame odd">
+        Odd Frame
+        <div class="label">Frame 3</div>
+      </div>
+      <div class="frame even">
+        Even Frame
+        <div class="label">Frame 4</div>
+      </div>
+      <!-- Row 2 -->
+      <div class="frame odd">
+        Odd Frame
+        <div class="label">Frame 5</div>
+      </div>
+      <div class="frame even">
+        Even Frame
+        <div class="label">Frame 6</div>
+      </div>
+      <div class="frame odd">
+        Odd Frame
+        <div class="label">Frame 7</div>
+      </div>
+      <div class="frame even">
+        Even Frame
+        <div class="label">Frame 8</div>
+      </div>
+    </div>
+  </body>
+</html>
